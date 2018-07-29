@@ -1,8 +1,10 @@
-const express = require('express');
+const express = require("express");
 
 const server = express();
 
-console.log(server);
+server.get("/places", (req, res) => {
+  res.send("test working");
+  res.end();
+});
 
-
-server.listen(8000, () => console.log("API running on port 8000")
+server.listen(8000, () => console.log("API running on port 8000"));
